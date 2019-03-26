@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/bububa/xgboost-go/xgboost"
+	"github.com/liuhaoXD/xgboost-go/xgboost"
 	"log"
 )
 
@@ -13,9 +13,9 @@ func main() {
 		col   int
 	)
 	for row < 100 {
-		var dataRow []float32
+		var dataRow []float64
 		for col < 3 {
-			dataRow = append(dataRow, float32((row+1)*(col+1)))
+			dataRow = append(dataRow, float64((row+1)*(col+1)))
 			col += 1
 		}
 		train = append(train, dataRow)
@@ -74,9 +74,9 @@ func main() {
 	row = 0
 	col = 0
 	for row < 100 {
-		var dataRow []float32
+		var dataRow []float64
 		for col < 3 {
-			dataRow = append(dataRow, float32((row+1)*(col+1)))
+			dataRow = append(dataRow, float64((row+1)*(col+1)))
 			col += 1
 		}
 		test = append(test, dataRow)

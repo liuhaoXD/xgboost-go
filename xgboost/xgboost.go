@@ -10,7 +10,7 @@ import (
 	"errors"
 )
 
-type DMatrix [][]float32
+type DMatrix [][]float64
 
 type DMatrixHandle struct {
 	ptr C.DMatrixHandle
